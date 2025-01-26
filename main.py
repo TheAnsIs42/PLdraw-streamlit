@@ -125,7 +125,11 @@ if "dataList" not in sl.session_state:
     sl.session_state.dataList = []
 if "upload_files" not in sl.session_state:
     sl.session_state.upload_files = []
-reloadEntry(sl.file_uploader("upload", accept_multiple_files=True))
+reloadEntry(
+    sl.file_uploader(
+        "Upload PL '.txt' file, clear by pressing R", accept_multiple_files=True
+    )
+)
 
 
 # sl.dataframe(
