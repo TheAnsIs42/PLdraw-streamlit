@@ -4,6 +4,10 @@ from plotly import graph_objects as go
 import plotly.express as px
 import plotly.io as pio
 from scipy import signal
+import os
+
+if not os.path.exists("image"):
+    os.mkdir("image")
 
 
 class dataEntry(dict):
