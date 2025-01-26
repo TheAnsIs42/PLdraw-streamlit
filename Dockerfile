@@ -11,12 +11,6 @@ RUN apt-get update && apt-get install -y\
 COPY main.py ./
 COPY requirements.txt ./
 RUN pip3 install -r requirements.txt
-SHELL [ "/bin/bash", "-c" ]
-RUN echo $"mkdir image \n\
-  cd image \n\
-  touch simple.svg \n\
-  touch test.svg\n\
-  cd .."
 EXPOSE 8501
 
 HEALTHCHECK CMD [ "curl --fail http://localhost:8501/_stcore/health" ]
